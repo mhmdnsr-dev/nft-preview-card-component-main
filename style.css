@@ -1,0 +1,179 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+*/
+
+/*
+ **************
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* 10/16=0.625 */
+  font: 62.5% "Outfit", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 37.5rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.NFT-card {
+  max-width: 33rem;
+  padding: 2.5rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+}
+.hero-img {
+  width: 28rem;
+  height: 28rem;
+  background-image: url(images/image-equilibrium.jpg);
+  background-size: contain;
+  border-radius: 9px;
+  position: relative;
+}
+.hero-img:hover {
+  background-image: linear-gradient(
+      hsl(178, 100%, 50%, 0.4),
+      hsl(178, 100%, 50%, 0.4)
+    ),
+    url(./images/image-equilibrium.jpg);
+  cursor: pointer;
+}
+.hero-img:hover::after {
+  content: "";
+  width: 4.8rem;
+  height: 4.8rem;
+  background-image: url(./images/icon-view.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tittle {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  margin: 2rem 0;
+}
+.tittle:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+.description {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 2rem;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+.days {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.7rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.author-img {
+  max-width: 3rem;
+  outline: 1px solid white;
+  border-radius: 50%;
+}
+.author span {
+  color: white;
+}
+.author span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  /* display: flex;
+  justify-content: center;
+  gap: 0.5rem; */
+  margin: 2rem 0;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(217, 100%, 50%);
+}
+
+/* - Desktop: 1440px */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 100%;
+  }
+  .attribution {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
